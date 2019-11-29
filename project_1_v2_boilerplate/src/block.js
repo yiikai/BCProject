@@ -45,6 +45,7 @@ class Block {
             // Comparing if the hashes changed
             // Returning the Block is not valid
             let recalculatehash = SHA256(JSON.stringify(self)).toString();
+            self.hash = tmphash;
             // Returning the Block is valid
 						if(tmphash == recalculatehash)
 						{
